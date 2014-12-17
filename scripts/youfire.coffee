@@ -11,3 +11,6 @@
 module.exports = (robot) ->
   robot.respond /poop/, (msg) ->
     msg.reply 'poop! I did it!'
+  robot.respond /add a video with this id:(.*)/, (msg) ->
+    id = msg.match[1]
+    msg.reply id
