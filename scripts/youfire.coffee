@@ -8,9 +8,12 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
+Firebase = require("firebase");
+
+videoStore = new Firebase("https://youfire.firebaseio.com/videos");
+
 module.exports = (robot) ->
-  robot.respond /poop/, (msg) ->
-    msg.reply 'poop! I did it!'
   robot.respond /add a video with this id:(.*)/, (msg) ->
     id = msg.match[1]
+    videoStore.push youtubeId: id
     msg.reply id
