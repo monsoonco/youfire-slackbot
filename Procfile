@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n youfire-slackbot
+web: bin/hubot -a slack
